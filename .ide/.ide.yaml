@@ -24,10 +24,37 @@ workspace:
         - $HOME/.m2/repository:/root/.m2/repository
         - .:/home/project
       expose:
-        - 3000
+        - 8080
+      ports:
+        - 8080:8080
       networks:
-        - smartide-network
-        
+        - boathouse-backend-dev-network
+
+    boathouse-backend-db:
+      container_name: boathouse-backend-db
+      image: registry.cn-hangzhou.aliyuncs.com/boathouse/mysql:5.6
+      command: 
+        - --default-authentication-plugin=mysql_native_password
+      restart: always
+      expose:
+        - 3306
+      ports:
+        - 3306:3306
+      environment:
+        MYSQL_ROOT_PASSWORD: P2ssw0rd
+      networks:
+        - boathouse-backend-dev-network
+
+    phpmyadmin:
+      image: registry.cn-hangzhou.aliyuncs.com/boathouse/phpmyadmin:5.0.4-apache
+      restart: always
+      ports:
+        - 8090:80
+      environment:
+        - PMA_ARBITRARY=1
+      networks:
+        - boathouse-backend-dev-network
+
   networks:
-    smartide-network:
+    boathouse-backend-dev-network:
       external: true
