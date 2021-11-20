@@ -1,0 +1,33 @@
+version: smartide/v0.2
+orchestrator:
+  type: docker-compose
+  version: 3
+workspace:
+  dev-container:
+    service-name: boathouse-backend-dev
+    webide-port: 6800
+    ide-type: vscode
+    volumes: 
+      git-config: true
+      ssh-key: true
+  services:
+
+    boathouse-backend-dev:
+      container_name: boathouse-backend-dev
+      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-java-opvscode:latest
+      restart: always
+      environment:
+        POSTGRES_HOST_AUTH_METHOD: trust
+        ROOT_PASSWORD: root123
+        TZ: Asia/Shanghai
+      volumes:
+        - $HOME/.m2/repository:/root/.m2/repository
+        - .:/home/project
+      expose:
+        - 3000
+      networks:
+        - smartide-network
+        
+  networks:
+    smartide-network:
+      external: true
