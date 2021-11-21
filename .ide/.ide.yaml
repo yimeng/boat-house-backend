@@ -59,21 +59,6 @@ workspace:
         PMA_ARBITRARY: "1"
       networks:
         - boathouse-dev-network
-    
-    jenkins:
-      container_name: jenkins
-      image: registry.cn-hangzhou.aliyuncs.com/boathouse/jenkins:lts
-      user: root
-      restart: always
-      expose:
-        - 8080
-      ports:
-        - '8080:8080'
-        - '50000:50000'
-      volumes:
-        - './.ide/.temp/jenkins_home:/var/jenkins_home'
-      networks:
-         - boathouse-dev-network
 
   networks:
     boathouse-dev-network:
