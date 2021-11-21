@@ -8,3 +8,13 @@ cd src/product-service/api
 API http://localhost:8080/api/v1.0/swagger-ui.html
 PHPMyAdmin http://localhost:8090/
 
+
+## Debugging
+
+https://github.com/Microsoft/vscode-java-debug/issues/300cl
+
+```shell
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000"
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000"
+```
+
