@@ -28,7 +28,7 @@ workspace:
       ports:
         - 8080:8080
       networks:
-        - smartide-network
+        - boathouse-dev-network
 
     boathouse-backend-db:
       container_name: boathouse-backend-db
@@ -56,8 +56,8 @@ workspace:
       environment:
         PMA_ARBITRARY: "1"
       networks:
-        - smartide-network
+        - boathouse-dev-network
 
   networks:
-    smartide-network:
+    boathouse-dev-network:
       external: true
