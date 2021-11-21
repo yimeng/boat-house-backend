@@ -24,7 +24,8 @@ workspace:
         - .:/home/project
       expose:
         - 3000
-        - 8080
+        - 8101
+        - 8102
       ports:
         - 8080:8080
       networks:
@@ -57,6 +58,18 @@ workspace:
         PMA_ARBITRARY: "1"
       networks:
         - boathouse-dev-network
+    
+    jenkins:
+      image: 'jenkins/jenkins:lts'
+      restart: always
+      expose:
+        - 8080
+      ports:
+        - '8080:8080'
+        - '50000:50000'
+    
+      volumes:
+        - ./.ide/.temp/jenkins_home:/var/jenkins_home'
 
   networks:
     boathouse-dev-network:
