@@ -44,7 +44,7 @@ workspace:
       environment:
         MYSQL_ROOT_PASSWORD: P2ssw0rd
       networks:
-        - smartide-network
+        - boathouse-dev-network
 
     phpmyadmin:
       container_name: phpmyadmin
@@ -67,9 +67,10 @@ workspace:
       ports:
         - '8080:8080'
         - '50000:50000'
-    
       volumes:
         - ./.ide/.temp/jenkins_home:/var/jenkins_home'
+      networks:
+         - boathouse-dev-network
 
   networks:
     boathouse-dev-network:
