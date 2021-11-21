@@ -6,7 +6,9 @@
          "type": "java",
          "name": "Debug (Launch)",
          "request": "launch",
-         "mainClass": "",
+         "mainClass": "com.idcf.boathouse.product.ProductServiceApplication",
+         "projectName": "product-service",
+         "cwd": "${workspaceFolder}/product-service",
          "args": ""
        },
        {
