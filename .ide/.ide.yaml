@@ -71,7 +71,7 @@ workspace:
         - '8080:8080'
         - '50000:50000'
       volumes:
-        - '$HOME/jenkins_home:/var/jenkins_home'
+        - './.ide/.temp/jenkins_home:/var/jenkins_home'
       networks:
          - boathouse-dev-network
 
