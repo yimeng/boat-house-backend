@@ -22,6 +22,7 @@ workspace:
       volumes:
         - $HOME/.m2/repository:/root/.m2/repository
         - .:/home/project
+        - /var/run/docker.sock:/var/run/docker.sock
       expose:
         - 3000
         - 8100
