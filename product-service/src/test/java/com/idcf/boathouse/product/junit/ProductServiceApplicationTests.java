@@ -30,6 +30,7 @@ public class ProductServiceApplicationTests {
     public static void tearDownClass() {
     }
 
+    /*
     // 在@Test标注的测试方法之前运行
     @Before
     public void setUp() throws Exception {
@@ -76,5 +77,5 @@ public class ProductServiceApplicationTests {
     void contextLoads() {
 
     }
-
+    */
 }

@@ -49,6 +49,7 @@ public class OrderItemsMapperTest {
     public void tearDown() {
     }
 
+    /*
     @Test
     public void testInsert() {
         // 本地测试通过
@@ -96,4 +97,6 @@ public class OrderItemsMapperTest {
         BigDecimal rs = count.multiply(price);
         System.out.println(rs.doubleValue());
     }
+
+    */
 }

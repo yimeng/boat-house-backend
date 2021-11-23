@@ -45,6 +45,7 @@ public class OrdersMapperTest {
 
     }
 
+    /*
     @Test
     public void testInsert() {
         // 本地测试通过
@@ -68,4 +69,5 @@ public class OrdersMapperTest {
         List<Orders> orders = ordersMapper.findPendingOrders(0, 10);
         System.out.println(orders.size());
     }
+    */
 }

@@ -39,6 +39,7 @@ public class IntroPageServiceTest {
 
     }
 
+    /*
     @Test
     public void inserIntroPage() throws Exception {
         IntroPageFront introPageFront=new IntroPageFront();
@@ -74,6 +75,8 @@ public class IntroPageServiceTest {
         IntroPageFront introPageFront = introPageService.getIntroPage("test");
         Assert.assertEquals("test", introPageFront.page_id);
     }
+
+    */
 
 
 }

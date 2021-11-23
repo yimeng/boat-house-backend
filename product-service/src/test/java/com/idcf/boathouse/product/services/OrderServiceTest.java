@@ -48,6 +48,7 @@ public class OrderServiceTest {
 
     }
 
+    /*
     @Test
     public void create() throws Exception {
         OrderCreateVo orderCreateVo = new OrderCreateVo();
@@ -90,6 +91,8 @@ public class OrderServiceTest {
         int res = orderService.refuseOrders(orders.get(0).getOrderId(), "the order have something wrong..");
         Assert.assertEquals(1, res);
     }
+
+    */
 
 
 }

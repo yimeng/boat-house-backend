@@ -15,6 +15,7 @@ public class FoodApplicationTests {
     private FoodController foodController;
     private FoodService foodService=new FoodService();
 
+    /*
     @Test
     public void AddFood() {
         FoodPost foodPost = new FoodPost();
@@ -25,4 +26,5 @@ public class FoodApplicationTests {
         foodPost.description = "最受欢迎的甜品";
         //foodController.addFood(foodPost);
     }
+    */
 }
