@@ -1,9 +1,9 @@
 package com.idcf.boathouse.product.models;
 
-import io.swagger.annotations.ApiModelProperty;
+//import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
-import java.sql.Blob;
+//import java.sql.Blob;
 
 public class FoodPost {
     public Integer id;

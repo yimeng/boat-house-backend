@@ -4,8 +4,8 @@ package com.idcf.boathouse.product.models;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import java.math.BigDecimal;
-import java.sql.Blob;
+//import java.math.BigDecimal;
+//import java.sql.Blob;
 
 /**
  * @author yan.wang

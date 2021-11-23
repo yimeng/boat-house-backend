@@ -2,8 +2,8 @@ package com.idcf.boathouse.account.config;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class JwtUtil {
-    private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
+    //private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
     public static final long EXPIRATION_TIME = 3600_000; // 1 hour
     public static final String SECRET = "ThisIsASecret";
     public static final String TOKEN_PREFIX = "Bearer";

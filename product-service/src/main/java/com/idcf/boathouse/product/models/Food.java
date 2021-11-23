@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
-import java.sql.Blob;
+//import java.sql.Blob;
 
 @ApiModel
 public class Food {

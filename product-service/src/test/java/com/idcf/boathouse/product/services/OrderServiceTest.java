@@ -88,7 +88,7 @@ public class OrderServiceTest {
     public void refuse() {
         List<OrderVo> orders = orderService.findPendingOrders(1, 10);
         int res = orderService.refuseOrders(orders.get(0).getOrderId(), "the order have something wrong..");
-        //Assert.assertEquals(1, res);
+        Assert.assertEquals(1, res);
     }
 
 

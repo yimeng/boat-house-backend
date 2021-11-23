@@ -1,8 +1,8 @@
 package com.idcf.boathouse.product.models;
 
-import io.swagger.annotations.ApiModelProperty;
+//import io.swagger.annotations.ApiModelProperty;
 
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 
 /**
  * @author yan.wang
