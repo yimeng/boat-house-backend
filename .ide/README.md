@@ -18,3 +18,5 @@ mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=
 mvn spring-boot:run -Dspring-boot.run.jvmArguments="agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8000"
 ```
 
+记得安装Lombok插件
+
