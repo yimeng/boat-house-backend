@@ -45,7 +45,7 @@ workspace:
       environment:
         MYSQL_ROOT_PASSWORD: P2ssw0rd
       volumes:
-        ./.ide/.temp/mysql-data:/var/lib/mysql
+        - './.ide/.temp/mysql-data:/var/lib/mysql'
       networks:
         - boathouse-dev-network
 
