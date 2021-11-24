@@ -16,7 +16,6 @@ workspace:
       image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-java-opvscode:latest
       restart: always
       environment:
-        POSTGRES_HOST_AUTH_METHOD: trust
         ROOT_PASSWORD: root123
         TZ: Asia/Shanghai
       volumes:
@@ -45,6 +44,8 @@ workspace:
         - 3306:3306
       environment:
         MYSQL_ROOT_PASSWORD: P2ssw0rd
+      volumes:
+        ./.ide/.temp/mysql-data:/var/lib/mysql
       networks:
         - boathouse-dev-network
 
