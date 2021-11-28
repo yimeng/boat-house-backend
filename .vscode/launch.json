@@ -4,13 +4,22 @@
    
        {
          "type": "java",
-         "name": "Debug (Launch)",
+         "name": "Debug ProductService",
          "request": "launch",
          "mainClass": "com.idcf.boathouse.product.ProductServiceApplication",
          "projectName": "product-service",
          "cwd": "${workspaceFolder}/product-service",
          "args": ""
        },
+       {
+        "type": "java",
+        "name": "Debug AccountService",
+        "request": "launch",
+        "mainClass": "com.idcf.boathouse.account.AccountServiceApplication",
+        "projectName": "account-service",
+        "cwd": "${workspaceFolder}/account-service",
+        "args": ""
+      },
        {
          "type": "java",
          "name": "Debug (Attach)",
