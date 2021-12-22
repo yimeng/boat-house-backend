@@ -28,7 +28,6 @@ workspace:
       volumes:
         - /home/$HOME/project/boat-house-backend:/home/project
       expose:
-        - 3000
         - 8100
         - 8101
         - 8887
