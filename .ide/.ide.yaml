@@ -26,7 +26,7 @@ workspace:
       environment:
         TZ: Asia/Shanghai
       volumes:
-        - /home/$HOME/project/boat-house-backend:/home/project
+        - /home/jiadev/project/boat-house-backend:/home/project
       expose:
         - 8100
         - 8101
