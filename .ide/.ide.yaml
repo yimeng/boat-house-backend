@@ -14,8 +14,7 @@ workspace:
       boathouse-backend-db: 3306
       phpmyadmin: 8090
       jenkins: 8080
-      idea: 8887
-    ide-type: vscode
+    ide-type: jb-projector
     volumes: 
       git-config: true
       ssh-key: true
@@ -27,16 +26,14 @@ workspace:
       environment:
         TZ: Asia/Shanghai
       volumes:
-        - /home/jia/project/boat-house-backend:/home/project
+        - /home/$HOME/project/boat-house-backend:/home/project
       expose:
-        - 3000
         - 8100
         - 8101
         - 8887
       ports:
         - 8100:8100
         - 8101:8101
-        - 8887:8887
       networks:
         - boathouse-dev-network
 
@@ -81,7 +78,7 @@ workspace:
         - '8080:8080'
         - '50000:50000'
       volumes:
-        - './.ide/.jenkins/jenkins_home:/var/jenkins_home'
+        - './.ide/.data/jenkins_home:/var/jenkins_home'
       networks:
          - boathouse-dev-network
 
