@@ -26,7 +26,9 @@ workspace:
       environment:
         TZ: Asia/Shanghai
       volumes:
-        - /home/$HOME/project/boat-house-backend:/home/project
+        - .:/home/project
+        - $HOME/.m2/repository:/root/.m2/repository
+        - /var/run/docker.sock:/var/run/docker.sock
       expose:
         - 8100
         - 8101
