@@ -14,23 +14,26 @@ workspace:
       boathouse-backend-db: 3306
       phpmyadmin: 8090
       jenkins: 8080
-    ide-type: jb-projector
+    ide-type: vscode
     volumes: 
       git-config: true
       ssh-key: true
   services:
     boathouse-backend-dev:
       container_name: boathouse-backend-dev
-      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-jetbrain-idea-c:latest
+      image: registry.cn-hangzhou.aliyuncs.com/smartide/smartide-java-bh:latest
       restart: always
       environment:
+        ROOT_PASSWORD: smartide123.@IDE
         TZ: Asia/Shanghai
       volumes:
+        - $HOME/.m2/repository:/root/.m2/repository
         - .:/home/project
+        - /var/run/docker.sock:/var/run/docker.sock
       expose:
+        - 3000
         - 8100
         - 8101
-        - 8887
       ports:
         - 8100:8100
         - 8101:8101
@@ -50,7 +53,7 @@ workspace:
       environment:
         MYSQL_ROOT_PASSWORD: P2ssw0rd
       volumes:
-        - './.ide/.data/mysql-data:/var/lib/mysql'
+        - './.ide/.temp/mysql-data:/var/lib/mysql'
       networks:
         - boathouse-dev-network
 
@@ -78,7 +81,7 @@ workspace:
         - '8080:8080'
         - '50000:50000'
       volumes:
-        - './.ide/.data/jenkins_home:/var/jenkins_home'
+        - './.ide/.temp/jenkins_home:/var/jenkins_home'
       networks:
          - boathouse-dev-network
 
